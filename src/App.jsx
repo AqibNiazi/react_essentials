@@ -1,11 +1,14 @@
-import { CORE_CONCEPTS } from "./data";
+import { useState } from "react";
+import { CORE_CONCEPTS, EXAMPLES } from "./data";
 import Header from "./components/Header/Header";
 import CoreConcept from "./components/CoreConcept/CoreConcept";
 import TabButton from "./components/TabButton/TabButton";
 function App() {
+  const [selectedContent, setSelectedContent] = useState("");
   const handleClick = (selectedButton) => {
-    console.log(selectedButton);
+    setSelectedContent(selectedButton);
   };
+  console.log("Examples", EXAMPLES);
   return (
     <div>
       <Header />
@@ -33,6 +36,17 @@ function App() {
             <TabButton onClick={() => handleClick("props")}>Props</TabButton>
             <TabButton onClick={() => handleClick("state")}>State</TabButton>
           </menu>
+          {selectedContent ? (
+            <div id="tab-content">
+              <h3>{EXAMPLES[selectedContent]?.title}</h3>
+              <p>{EXAMPLES[selectedContent]?.description}</p>
+              <pre>
+                <code>{EXAMPLES[selectedContent]?.code}</code>
+              </pre>
+            </div>
+          ) : (
+            <p>Please select a topic</p>
+          )}
         </section>
       </main>
     </div>
