@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { EXAMPLES } from "../../data";
-import TabButton from "../TabButton/TabButton";
+import TabButton from "../TabButton";
 import Section from "../Section";
 import Tabs from "../Tabs";
 const Examples = () => {
