@@ -1,5 +1,5 @@
 import React from "react";
-import CoreConcept from "../CoreConcept/CoreConcept";
+import CoreConcept from "../CoreConcept";
 import { CORE_CONCEPTS } from "../../data";
 
 const CoreConcepts = () => {
