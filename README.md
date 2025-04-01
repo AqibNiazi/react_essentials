@@ -43,4 +43,4 @@ Ensure you have **Node.js** installed on your system.
 4. Gain hands-on experience in **React fundamentals**.  
 
 ## 📎 Attachments  
-_(Screenshots, demo videos, or additional resources can be added here.)_  
+![Project Dashboard](https://github.com/AqibNiazi/react_essentials/blob/main/public/react-essential.png)  
